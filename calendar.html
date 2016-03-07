@@ -1,0 +1,100 @@
+<!--THE REAL PRODUCTIVITY GAME (RPG)-->
+<!--CREATED BY RED ROCK DEVELOPERS-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="resources/css/master.css">
+<script src="scripts/main.js"></script>
+<script>
+function save(){
+    var checkbox = document.getElementById('cbox1');
+    if(document.getElementById('cbox1').checked) {
+        localStorage.setItem('cbox1', true);
+    }
+}
+
+function load(){    
+    var checked = localStorage.getItem('cbox1');
+    if (checked == "true") {
+        document.getElementById("cbox1").setAttribute('checked','checked');
+    }
+}
+function wis(){
+    location.reload();
+    localStorage.clear()
+
+}
+</script>
+
+<body onload="load()">
+    <!--HEADER-->
+    <div class="header">
+    <img src="resources/images/red-butte.jpg" />
+    <h1>Welcome to Durotar Developers productivity tools.</h1>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="priority-list.html">Priority List</a></li>
+            <li><a href="project-list.html">Project List</a></li>
+            <li><a href="daily-tasks.html">Daily Tasks</a></li>
+            <li><a href="to-do-list.html">To Do List</a></li>
+            <li><a href="calendar.html" class="active">Calendar</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="personal-constitution.html">Personal Constitution</a></li>
+            <li><a href="updates.html">Future Updates</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <!--MAIN CONTENT-->
+    <div class="main-content">
+    <h1>Face Your Problems Head On</h1>
+    <img src="resources/images/tauren-warrior.jpg" />
+    <h1>Daily Tasks</h1>
+    <h2>Form a Routine</h2>
+    <ul>
+        <li>5:00 - </li>
+        <li>5:30 - </li>
+        <li>6:00 - Wake up/pray/make bed/go to gym</li>
+        <li>6:30 - </li>
+        <li>7:00 - Get back from gym/shower/get dressed</li>
+        <li>7:30 - breakfast</li>
+        <li>8:00 - Scripture Study</li>
+        <li>8:30 - leave for work</li>
+        <li>9:00 - Work at SDL</li>
+        <li>9:30 - </li>
+        <li>10:00 - snack</li>
+        <li>10:30 - </li>
+        <li>11:00 - </li>
+        <li>11:30 - </li>
+        <li>12:00 - Lunch</li>
+        <li>12:30 - </li>
+        <li>1:00 - </li>
+        <li>1:30 - </li>
+        <li>2:00 - </li>
+        <li>2:30 - snack</li>
+        <li>3:00 - </li>
+        <li>3:30 - </li>
+        <li>4:00 - </li>
+        <li>4:30 - </li>
+        <li>5:00 - Finish at work/come home</li>
+        <li>5:30 - Chill</li>
+        <li>6:00 - Dinner</li>
+        <li>6:30 - Dinner</li>
+        <li>7:00 - LAEP 1200</li>
+        <li>7:30 - LAEP 1200</li>
+        <li>8:00 - snack/LAEP 1200</li>
+        <li>8:30 - LAEP 1200</li>
+        <li>9:00 - Daily Planning/clear out tabs/clean off desktop/clean up emails/clear out Keep notes/clean up flash drives/double check HabitRPG/review productivity for the day/set calendar for next day/check short-term and long-term goals/compare personal constitution</li>
+        <li>9:30 - Get ready for bed/write in journal/brush teeth/put on pjs/wash dishes/clean room</li>
+        <li>10:00 - </li>
+        <li>10:30 - </li>
+        <li>11:00 - </li>
+    </ul>
+    <p>Super Backup plan: Personal Planning</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!--THE REAL PRODUCTIVITY GAME (RPG)-->
+<!--CREATED BY RED ROCK DEVELOPERS-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="resources/css/master.css">
+<script src="scripts/main.js"></script>
+<script>
+function save(){
+    var checkbox = document.getElementById('cbox1');
+    if(document.getElementById('cbox1').checked) {
+        localStorage.setItem('cbox1', true);
+    }
+}
+
+function load(){    
+    var checked = localStorage.getItem('cbox1');
+    if (checked == "true") {
+        document.getElementById("cbox1").setAttribute('checked','checked');
+    }
+}
+function wis(){
+    location.reload();
+    localStorage.clear()
+
+}
+</script>
+
+<body onload="load()">
+    <!--HEADER-->
+    <div class="header">
+    <img src="resources/images/red-butte.jpg" />
+    <h1>Welcome to Durotar Developers productivity tools.</h1>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="priority-list.html">Priority List</a></li>
+            <li><a href="project-list.html">Project List</a></li>
+            <li><a href="daily-tasks.html" class="active">Daily Tasks</a></li>
+            <li><a href="to-do-list.html">To Do List</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="personal-constitution.html">Personal Constitution</a></li>
+            <li><a href="updates.html">Future Updates</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <!--MAIN CONTENT-->
+    <div class="main-content">
+    <h1>Daily Tasks</h1>
+    <ol>
+        <li><input type="checkbox" id="cbox1" value="first_checkbox"><a href="https://www.duolingo.com/">Duolingo 100 XP</a></li>
+        <li><input type="checkbox" id="cbox2" value="second_checkbox"><a href="https://habitica.com/#/tasks">Habit RPG</a></li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox"><a href="https://hackusu.slack.com/messages/random/">HackUSU Slack</a></li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox"><a href="https://www.facebook.com/groups/905217446198325/">Order of the Stick</a> <a href="https://docs.google.com/spreadsheets/d/1Zg1jmUjXtOYAhWqLHtFDB69tjeXZD5amGQMU37h7fCE/edit#gid=0">Spreadsheet</a></li>
+        <li><input type="checkbox" id="cbox4" value="fourth_checkbox"><a href="http://stackoverflow.com/questions/26628812/localstorage-how-to-save-a-checkbox">Continue Checkbox Development</a></li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox">Fill Sketch Book</li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox"><a href="https://usu.instructure.com/">Check Canvas Daily</a></li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox">Aggie Blue Bikes Appointment</li>
+        <input type="button" id="ReserveerButton1" value="save" onclick="save()"/>
+        <input type="button" id="Wisbutton1" value="delete" onclick="wis()"/>
+    </ol>
+    <p>WoW really motivates me</p>
+    </div>
+</body>
+
+</html>

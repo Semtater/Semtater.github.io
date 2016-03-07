@@ -1,0 +1,64 @@
+<!--THE REAL PRODUCTIVITY GAME (RPG)-->
+<!--CREATED BY RED ROCK DEVELOPERS-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="resources/css/master.css">
+<script src="scripts/main.js"></script>
+<script>
+function save(){
+    var checkbox = document.getElementById('cbox1');
+    if(document.getElementById('cbox1').checked) {
+        localStorage.setItem('cbox1', true);
+    }
+}
+
+function load(){    
+    var checked = localStorage.getItem('cbox1');
+    if (checked == "true") {
+        document.getElementById("cbox1").setAttribute('checked','checked');
+    }
+}
+function wis(){
+    location.reload();
+    localStorage.clear()
+
+}
+</script>
+
+<body onload="load()">
+    <!--HEADER-->
+    <div class="header">
+    <img src="resources/images/red-butte.jpg" />
+    <h1>Welcome to Durotar Developers productivity tools.</h1>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="priority-list.html">Priority List</a></li>
+            <li><a href="project-list.html">Project List</a></li>
+            <li><a href="daily-tasks.html">Daily Tasks</a></li>
+            <li><a href="to-do-list.html">To Do List</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="personal-constitution.html">Personal Constitution</a></li>
+            <li><a href="updates.html" class="active">Future Updates</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <!--MAIN CONTENT-->
+    <div class="main-content">
+    <h1>To-Do List</h1>
+    <ol>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Checkboxes</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Sort by Priority (High, medium, low, urgent or not)</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Sort by Due Date</li>
+        <input type="button" id="ReserveerButton1" value="save" onclick="save()"/>
+        <input type="button" id="Wisbutton1" value="delete" onclick="wis()"/>
+    </ol>
+    </div>
+</body>
+
+</html>

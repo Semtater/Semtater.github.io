@@ -1,0 +1,100 @@
+<!--THE REAL PRODUCTIVITY GAME (RPG)-->
+<!--CREATED BY RED ROCK DEVELOPERS-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title</title>
+<link rel="stylesheet" type="text/css" href="resources/css/master.css">
+<script src="scripts/main.js"></script>
+<script>
+function save(){
+    var checkbox = document.getElementById('cbox1');
+    if(document.getElementById('cbox1').checked) {
+        localStorage.setItem('cbox1', true);
+    } else{
+        localStorage.setItem('cbox1', false);
+    }
+}
+
+function load(){    
+    var checked = localStorage.getItem('cbox1');
+    if (checked == "true") {
+        document.getElementById("cbox1").setAttribute('checked','checked');
+    }
+}
+function wis(){
+    location.reload();
+    localStorage.clear();
+
+}
+</script>
+
+<body onload="load()">
+    <!--HEADER-->
+    <div class="header">
+    <img src="resources/images/red-butte.jpg" />
+    <h1>Welcome to Durotar Developers productivity tools.</h1>
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="priority-list.html">Priority List</a></li>
+            <li><a href="project-list.html">Project List</a></li>
+            <li><a href="daily-tasks.html">Daily Tasks</a></li>
+            <li><a href="to-do-list.html" class="active">To Do List</a></li>
+            <li><a href="calendar.html">Calendar</a></li>
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="personal-constitution.html">Personal Constitution</a></li>
+            <li><a href="updates.html">Future Updates</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    <!--MAIN CONTENT-->
+    <div class="main-content">
+    <h1>Face Your Problems Head On</h1>
+    <img src="resources/images/tauren-warrior.jpg" />
+    <h1>To-Do List</h1>
+    <ol>
+        <li><input type="checkbox" id="cbox1" value="first_checkbox" onclick="save()">Do homework</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">LAEP 1300</li>
+        <ul>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">Unfinished Project</li>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">Syllabus (set syllabus for myself with unfinished projects)</li>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">Clay model</li>
+            <ul>
+                <li><input type="checkbox" id="cbox3" value="third_checkbox"><a href="https://www.google.com/search?q=molten+span+map&tbm=isch&imgil=Bc9ATwFHIVxkmM%253A%253BmKyA5pXV2n1W4M%253Bhttp%25253A%25252F%25252Fwowwiki.wikia.com%25252Fwiki%25252FMolten_Fields&source=iu&pf=m&fir=Bc9ATwFHIVxkmM%253A%252CmKyA5pXV2n1W4M%252C_&usg=__FtDQnP1RO48r065Ty3MxTXr8R0g%3D&biw=1366&bih=643&ved=0ahUKEwibkYWiuaDLAhUDKWMKHWUcBUQQyjcIMQ&ei=twvWVttZg9KMA-W4lKAE#tbm=isch&q=blackrock+depths+entrance+map&imgrc=ixeSE5mVOSy4vM%3A">Blackrock depths entrance</a></li>
+                <li><input type="checkbox" id="cbox3" value="third_checkbox"><a href="https://www.youtube.com/watch?v=zKuT_mjkymc">Blackrock depths entrance video</a></li>
+            </ul>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox"><a href="laep-1350/magazine-list.html">Magazine List</a></li>
+        </ul>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">LAEP 2720</li>
+        <ul>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">Missed assignments</li>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">St. Thomas Aquinas Church</li>
+        </ul>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">LAEP 1200</li>
+        <ul>
+            <li><input type="checkbox" id="cbox3" value="third_checkbox">Unfinished assignments</li>
+        </ul>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Build Portfolio</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clean up OneNote</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clean up Evernote</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clean up Chrome tabs</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clean up desktop</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clean up flash drives</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Plan out how to control my time</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Work on my personal branding</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">HackUSU Marketing Campaign</li>
+        <li><input type="checkbox" id="cbox3" value="third_checkbox">Clearwater Coding Challenge</li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox">Adjust my work schedule to one that I can stick to</li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox">Practice drawing</li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox">Clear out emails on all email accounts(multiple gmails and the yahoo)</li>
+        <li><input type="checkbox" id="cbox5" value="fifth_checkbox"><a href="http://www.limitlesstomorrow.org/home.html">Apply for a grant</a></li>
+        <input type="button" id="ReserveerButton1" value="save" onclick="save()"/>
+        <input type="button" id="Wisbutton1" value="delete" onclick="wis()"/>
+    </ol>
+    </div>
+</body>
+
+</html>
